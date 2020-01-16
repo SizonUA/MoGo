@@ -236,6 +236,13 @@ hr {
   padding: 40px 0;
 }
 
+.section--design {
+  background: url(images/Design/Background_design.jpg) center no-repeat;
+  background-size: cover;
+  padding-bottom: 0;
+  /* opacity: 0.1; */
+}
+
 .section__header {
   width: 100%;
   max-width: 950px;
@@ -402,3 +409,24 @@ hr {
   /* line-height: 24px; */
   text-align: left;
 }
+/* end Services */
+
+/* begin Design */
+.design__devices {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.devices__item {
+  display: block;
+}
+
+.devices__item--iphone {
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+  z-index: 1;
+}
+/* end Design */
