@@ -244,6 +244,10 @@ hr {
   /* opacity: 0.1; */
 }
 
+.section--slider {
+  background-color: #f8f8f8;
+}
+
 .section__header {
   width: 100%;
   max-width: 950px;
@@ -282,42 +286,42 @@ hr {
   line-height: 24px;
 }
 
-/* about images */
-.about__images {
+/* card images */
+.card__images {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
 }
 
-.about__item {
+.card__item {
   width: 380px;
   background-color: #95e1d3;
   position: relative;
 }
 
-.about__item:hover .about__img {
+.card__item:hover .card__img {
   transform: translate3d(-10px, -10px, 0);
 }
 
-.about__item:hover .about__img img {
+.card__item:hover .card__img img {
   opacity: 0.1;
 }
 
-.about__item:hover .about__text {
+.card__item:hover .card__text {
   opacity: 1;
 }
 
-.about__img {
+.card__img {
   background: linear-gradient(to bottom, #f38181, #fce38a);
   transition: transform 0.2s linear;
 }
 
-.about__img img {
+.card__img img {
   display: block;
   transition: opacity 0.1s linear;
 }
 
-.about__text {
+.card__text {
   width: 100%;
   color: #ffffff;
   font-size: 18px;
@@ -447,20 +451,17 @@ hr {
   border: 1px solid #e5e5e5;
 }
 
-.accordion__item.active
-.accordion__content {
+.accordion__item.active .accordion__content {
   display: block;
 }
 
-.accordion__item.active
-.accordion__header:after {
+.accordion__item.active .accordion__header:after {
   transform: translateY(-50%) rotate(-45deg);
   margin-top: 5px;
-  }
+}
 
-.accordion__item.active
-.accordion__header {
-  border-bottom-color: #e5e5e5 ;
+.accordion__item.active .accordion__header {
+  border-bottom-color: #e5e5e5;
 }
 
 .accordion__header {
@@ -471,18 +472,17 @@ hr {
 }
 
 .accordion__header:after {
-content: "";
-display: block;
-width: 16px;
-height: 16px;
-border-top: 2px solid #cccccc;
-border-right: 2px solid #cccccc;
-position: absolute;
-top: 50%;
-right: 20px;
-z-index: 1;
-transform: translateY(-50%) rotate(135deg);
-
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #cccccc;
+  border-right: 2px solid #cccccc;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 1;
+  transform: translateY(-50%) rotate(135deg);
 }
 
 .accordion__icon {
@@ -505,8 +505,109 @@ transform: translateY(-50%) rotate(135deg);
   padding: 15px 20px;
   color: #999999;
   font-family: "Roboto", sans-serif;
+  font-style: italic;
   font-size: 15px;
   font-weight: 300;
-  font-style: italic;
   line-height: 24px;
 }
+/* end Accordion */
+
+/* begin Slider reviews */
+
+/* end Slider reviews */
+.reviews {
+  padding: 0 110px;
+  position: relative;
+}
+
+/* reviews btn */
+.reviews__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  font-size: 0px;
+  color: transparent;
+}
+
+.reviews__btn:after {
+  content: "";
+display: block;
+width: 16px;
+height: 16px;
+border-top: 2px solid #cccccc;
+border-left: 2px solid #cccccc;
+}
+
+.reviews__btn--prev{
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.reviews__btn--next {
+  right: 0;
+  transform: rotate(135deg);
+}
+
+/* reviews item */
+.reviews__item {
+  padding-left: 205px;
+  position: relative;
+}
+
+.reviews__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.reviews__text {
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 10px;
+}
+
+.reviews__author {
+  color: #333333;
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.reviews__author:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: #f38181;
+}
+
+/* begin Team */
+
+/* social item */
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social__item {
+  width: 55px;
+  height: 55px;
+  padding: 12px 10px;
+  background-color: #fce38a;
+  border-right: 1px solid #f38181;
+  color: #f38181;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.social__item:last-child {
+  border-right: 0;
+}
+/* end Team */
