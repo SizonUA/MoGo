@@ -295,9 +295,13 @@ hr {
 
 .card__item {
   width: 380px;
+}
+
+.card__inner {
   background-color: #95e1d3;
   position: relative;
 }
+
 
 .card__item:hover .card__img {
   transform: translate3d(-10px, -10px, 0);
@@ -335,6 +339,28 @@ hr {
   transform: translate3d(0, -40%, 0);
   opacity: 0;
   transition: opacity 0.2s linear;
+}
+
+.card__info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card__name {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.card__prof {
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 24px;
 }
 /* end About */
 
@@ -411,7 +437,7 @@ hr {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  /* line-height: 24px; */
+  line-height: 24px;
   text-align: left;
 }
 /* end Services */
@@ -513,8 +539,6 @@ hr {
 /* end Accordion */
 
 /* begin Slider reviews */
-
-/* end Slider reviews */
 .reviews {
   padding: 0 110px;
   position: relative;
@@ -588,9 +612,10 @@ border-left: 2px solid #cccccc;
   margin-right: 10px;
   background-color: #f38181;
 }
+/* end Slider reviews */
+
 
 /* begin Team */
-
 /* social item */
 .social {
   display: flex;
@@ -605,9 +630,16 @@ border-left: 2px solid #cccccc;
   color: #f38181;
   text-decoration: none;
   font-size: 30px;
+
+  transition: backgraund 0.1s linear, color 0.1s linear;
 }
 
 .social__item:last-child {
   border-right: 0;
+}
+
+.social__item:hover {
+  background-color: #f38181;
+  color: #ffffff;
 }
 /* end Team */
