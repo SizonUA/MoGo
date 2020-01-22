@@ -121,7 +121,6 @@ hr {
       rgba(252, 227, 138, 0.73)
     ),
     url(images/header_logo.png);
-  /* background: linear-gradient (to bottom, #f38181, #fce38a); */
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -237,14 +236,14 @@ hr {
 }
 
 .section--design {
-  background: url(images/Design/Background_design.jpg) center no-repeat;
+  background: url(images/Design/bg_design.jpg) center no-repeat;
   background-size: cover;
   padding-bottom: 0;
   margin-bottom: 40px;
   /* opacity: 0.1; */
 }
 
-.section--slider {
+.section--gray {
   background-color: #f8f8f8;
 }
 
@@ -575,7 +574,7 @@ border-left: 2px solid #cccccc;
 
 /* reviews item */
 .reviews__item {
-  padding-left: 205px;
+  padding-left: 250px;
   position: relative;
 }
 
@@ -584,6 +583,11 @@ border-left: 2px solid #cccccc;
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.reviews__photo--radius {
+  border: 3px solid #95e1d3;
+  border-radius: 50%;
 }
 
 .reviews__text {
@@ -643,3 +647,69 @@ border-left: 2px solid #cccccc;
   color: #ffffff;
 }
 /* end Team */
+
+/* begin Logos */
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* end Logos */
+
+/* begin Works */
+.works {
+  display: flex;
+}
+
+.works__col {
+  flex: 1 1 0;
+}
+
+.works__item {
+  position: relative;
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+}
+
+.works__item:hover .works__img {
+  opacity: 0.1;
+}
+
+.works__item:hover .works__info {
+  opacity: 1;
+}
+
+.works__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.2s linear;
+}
+
+.works__info {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 15px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translate3d(0, -50%, 0);
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.works__title {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.works__text {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
