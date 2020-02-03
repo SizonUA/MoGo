@@ -46,6 +46,7 @@ body {
 }
 
 .header.fixed {
+  padding: 10px 0;
   background-color: #eb8b8d;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -69,6 +70,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   color: #ffffff;
+  cursor: pointer;
 }
 
 /* nav */
@@ -132,6 +134,11 @@ body {
   cursor: pointer;
 }
 
+.nav-toggle:focus {
+  outline: 0;
+}
+
+
 .nav-toggle__item {
   display: block;
   width: 100%;
@@ -172,12 +179,12 @@ body {
 
 .nav-toggle.active .nav-toggle__item:before {
   transform-origin: left top;
-  transform: rotate(45deg) translate3d(0px, -3px, 0px);
+  transform: rotate(45deg) translate(0px, -4px);
 }
 
 .nav-toggle.active .nav-toggle__item:after {
   transform-origin: left bottom;
-  transform: rotate(-45deg) translate3d(0px, 2px, 0px);
+  transform: rotate(-45deg) translate(0px, 2px);
 }
 
 /* Intro */
@@ -305,7 +312,7 @@ body {
 /* About */
 /* section header */
 .section {
-  padding: 40px 0;
+  padding: 70px 0 40px;
 }
 
 .section--design {
@@ -637,21 +644,32 @@ body {
 
 /* Slider reviews */
 .reviews {
-  padding: 0 110px;
   position: relative;
 }
 
+.reviews .slick-slider {
+  padding: 0 110px;
+}
+
 /* reviews btn */
-.reviews__btn {
+.slick-arrow {
+  display: block;
   position: absolute;
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
   font-size: 0px;
   color: transparent;
+  border: 0;
+  background: none;
+  cursor: pointer;
 }
 
-.reviews__btn:after {
+.slick-arrow:focus {
+  outline: 0;
+}
+
+.slick-arrow:after {
   content: "";
   display: block;
   width: 16px;
@@ -660,18 +678,19 @@ body {
   border-left: 2px solid #cccccc;
 }
 
-.reviews__btn--prev {
+.slick-prev {
   left: 0;
   transform: rotate(-45deg);
 }
 
-.reviews__btn--next {
+.slick-next {
   right: 0;
   transform: rotate(135deg);
 }
 
 /* reviews item */
 .reviews__item {
+  min-height: 210px;
   padding-left: 250px;
   position: relative;
 }
@@ -1288,7 +1307,7 @@ body {
   }
 
   /* Slider reviews */
-  .reviews {
+  .reviews .slick-slider{
     padding: 0 60px;
   }
   .reviews__item {
@@ -1362,6 +1381,10 @@ body {
     background: #eb8b8d;
   }
 
+  .nav.active {
+    display: block;
+  }
+
   .nav__link {
     display: block;
     margin: 0;
@@ -1400,10 +1423,6 @@ body {
   .slider__text {
     display: none;
   }
-
-  /* .slider__text:before {
-    width: 40%;
-  } */
 
   /* Services */
   .services {
@@ -1559,12 +1578,12 @@ body {
   }
 
   /* Slider reviews */
-  .reviews__item {
+  .reviews .slick-slider {
     padding: 0;
   }
 
-  .reviews__btn {
-    top: 16%;
+  .slick-arrow {
+    top: 25%;
   }
 
   .reviews__text {
