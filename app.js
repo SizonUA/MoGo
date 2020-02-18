@@ -1,6 +1,6 @@
 $(function () {
 
-  var header = $('#header'),
+  let header = $('#header'),
     introH = $('#intro').innerHeight(),
     scrollOffset = $(window).scrollTop();
 
@@ -17,7 +17,7 @@ $(function () {
     if (scrollOffset >= introH) {
       header.addClass('fixed');
     } else {
-      header.removeClass('fixed')
+      header.removeClass('fixed');
     }
   }
 
@@ -25,7 +25,7 @@ $(function () {
   $('[data-scroll').on('click', function (event) {
     event.preventDefault();
 
-    var $this = $(this),
+    let $this = $(this),
       blockId = $(this).data('scroll'),
       blockOffset = $(blockId).offset().top;
 
@@ -49,7 +49,7 @@ $(function () {
   $('[data-collapse]').on('click', function (event) {
     event.preventDefault();
 
-    var $this = $(this),
+    let $this = $(this),
       blockId = $(this).data('collapse');
 
     $('#accordion-item').removeClass('active');

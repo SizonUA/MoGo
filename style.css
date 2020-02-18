@@ -759,7 +759,7 @@ body {
   text-decoration: none;
   font-size: 30px;
 
-  transition: backgraund 0.1s linear, color 0.1s linear;
+  transition: background 0.1s linear, color 0.1s linear;
 }
 
 .social__item:last-child {
@@ -1052,7 +1052,7 @@ body {
   padding: 0 15px;
 }
 
-.footer__col--subscrime {
+.footer__col--subscribe {
   width: 40%;
 }
 
@@ -1335,7 +1335,7 @@ body {
   }
 
   /* Footer */
-  .footer__col--subscrime {
+  .footer__col--subscribe {
     width: 100%;
   }
 
