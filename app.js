@@ -22,7 +22,7 @@ $(function () {
   }
 
   // Smooth scroll
-  $('[data-scroll').on('click', function (event) {
+  $('[data-scroll]').on('click', function (event) {
     event.preventDefault();
 
     let $this = $(this),
